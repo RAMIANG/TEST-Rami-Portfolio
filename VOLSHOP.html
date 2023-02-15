@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rami's Portfolio</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body> 
+<div id="header">
+   <div class="container"> 
+       <nav>
+       <img src="Black%20And%20White%20Rakia%20Design%20Studio%20Logo.png" class="logo">
+            <ul> 
+           <li><a href="index.html">HOME</a></li>
+           <li><a href="PORTFOLIO.html">PORTFOLIO</a></li>
+           <li><a href="ABOUTME.html">ABOUT</a></li>
+           <li><a href="#">CONTACT</a></li>
+            <li><a href="#">CV</a></li>
+           </ul>
+       </nav>
+    </div>
+</div>
+    <div class="container">
+    <img src= "PLZ WORK.png"  
+    </div>
+        
+<!---idk man------>
+           
+ <h1>OVERVIEW</h1>   
+<P>As mobile usuage is on the rise,my team and I wanted to create a mobile version of the University of Tennessee's Store "Vol Shop" </P>
+        <img src= mayeb.png> 
+<p>Product Concept Statement: VolShop App
+ As of right now there are no mobile applications in the market that serves a platform for anybody wanting to buy University of Tennessee at Knoxville gear. 
+We are proposing a mobile application which would make it easy for anyone wanting to purchase UTK gear to promote Vol pride for faculty, alumni, students, and fans. 
+Being able to buy gear/clothes off the app makes it easier to buy when not near a computer or pulling up the website on a mobile app. 
+</p>   
+<h1>RESEARCH</h1>
+<p>Interviews were conducted on a variety of possible users such as UTK students, UTK Staff, and general Vol fans.  </p>
+        
+<H1>Analysis</H1>
+   <img src="AFFINITY%20DIAGRAM.png">
+        <br>
+         <img src="123.png">
+<h1>Design</h1>
+<h1>Conclusions</h1>
+        
+    
+ <!--------FOOTER------>
+  <div class="copyright">
+        <p> Made with excitement and confusion!<i class="fas fa-heart">
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+   
+   
+    
+</body> 
+</html > 
+          
