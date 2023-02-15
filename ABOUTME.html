@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rami's Portfolio</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body> 
+<div id="header">
+   <div class="container"> 
+       <nav>
+       <img src="Black%20And%20White%20Rakia%20Design%20Studio%20Logo.png" class="logo">
+            <ul> 
+           <li><a href="index.html">HOME</a></li>
+           <li><a href="PORTFOLIO.html">PORTFOLIO</a></li>
+           <li><a href="ABOUTME.html">ABOUT</a></li>
+           <li><a href="#">CONTACT</a></li>
+            <li><a href="#">CV</a></li>
+           </ul>
+       </nav>
+    </div>
+</div>
+      <!----------------------ABOUTME------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src ="PORTRAIT%20PHOT%20ASSET.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">A Bit About Me!</h1>
+                <h2> Nice to meet you! My name is Rami Anguiano. I am a current student studying UX Design at the University of Tenneessee.</h2>
+                <p> <br>
+                   My end 
+goal is to become very knowledgeable in UI/UX, and hold a career 
+in this field. I am ready to be challenged to grow as an asset. <br><br>
+                    When I am not studying new programs like figma and adobe XD there are many things I enjoy to do. <br><br> This includes: 
+                    <br> <br>
+                    <li>Leisurely walks</li>
+                    <li>Drawing</li>
+                    <li>Photography</li>
+                    <li>Gaming</li>
+                    <li>Leisurely walks</li>
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Recent Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Developing Toolset</span><br>Figma, Adobe XD, Photoshop</li>
+                        <li><span>Soft Skills</span><br>Open-minded,Team-oriented,Self-Driven</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Current</span><br>Looking for employment/ internships</li>
+                        <li><span>05-2022 to 11/2022</span><br>Full-Time Care Partner</li>
+                        <li><span>04/2022 to 07/2022</span><br>Retail Associate for TJX MARSHALLS</li>
+                        <li><span>08/2021 to 01/2022</span><br>Resident Assistant for Austin Peay State University.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-current</span><br>Working on GOOGLE UX Certification</li>
+                        <li><span>2022-2023</span><br>Currently working on BA-Information Sciences-UXD Concetration | Minor in Graphic Design </li>
+                        <li><span>2020-2021</span><br>Studied at Austin Peay State University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      <!-- ---------services---------------- -->
+<!--------FOOTER------>
+  <div class="copyright">
+        <p> Made with help from YT: Easy Tutorials!<i class="fas fa-heart">
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+   
+   
+    
+</body> 
+</html > 
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </body> 
+</html > 
